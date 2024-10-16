@@ -2,22 +2,27 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-color: cornflowerblue;
+  /* background-color: cornflowerblue; */
   font-family: Arial, Helvetica, sans-serif;
 }
 
 .container{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
+  width: 500px;
+  margin: 0 auto;
 }
 
 .wrapper{
   display: flex;
   align-items: center;
+  justify-content: center;
   flex-direction: column;
+  min-height: 100vh;
+  min-width: 325px;
 }
+.content{
+  margin: 8px;
+}
+
 .row {
   display: flex;
   justify-content: center;
@@ -27,13 +32,19 @@
 button {
   border: none;
   background-color: firebrick;
-  color: #eaeaeaea;
+  color: #fff9f9ea;
   font-size: 24px;
   padding: 12px;
   font-weight: 600;
   margin-left: 10px;
   margin-top: 10px;
   height: 65px;
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: rgb(4, 85, 112);
+  transition: .5s all ease-in-out;
 }
 
 input {
@@ -48,4 +59,22 @@ input {
 #pertanyaan {
   font-size: 20px;
   font-weight: 700;
+}
+
+#loaders {
+  display: none;
+  width: 120px;
+  height: 120px;
+  position: absolute;
+  border: 16px solid #f3f3f3;
+  border-top: 16px solid rgb(44, 137, 196);
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg);}
+  100% { transform: rotate(360deg);}
 }
